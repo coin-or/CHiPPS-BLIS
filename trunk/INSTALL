@@ -1,0 +1,87 @@
+These instructions are for UNIX-like systems (including Linux, Cygwin
+and MSys) only.  If Microsoft Developer Studio projects are
+maintained for this package, you can find instructions at
+
+  https://projects.coin-or.org/MSDevStudio
+
+**********************************************************************
+***                         DOWNLOAD                               ***
+**********************************************************************
+
+You can obtain the source code for the Alps package in two ways:
+
+1. Obtain the source directly from the COIN-OR subversion repository
+   (recommended).  For this you needs the program 'svn' installed on
+   your machine, and output of "svn --version" must contain 
+   "handles 'https' scheme".
+
+   Assuming that you want to download stable vesion 0.8 into a subdirectory
+   "Blis-0.8", you type
+
+   svn checkout https://projects.coin-or.org/svn/Cops/Blis/stable/0.8 Blis-0.8
+
+2. Download the tarball from http://www.coin-or.org/download/source/Cops and
+   extract it, for example, with
+
+   tar -xzvf Blis-0.8.0.tgz
+
+   More detailed download instructions can be found at
+
+   https://projects.coin-or.org/Cops
+
+**********************************************************************
+***      CONFIGURATION, COMPILE, INSTALLATION                      ***
+**********************************************************************
+
+1. Serial Solver
+----------------
+
+Go into the directory that you just downloaded or extracted (e.g. Blis-0.8),
+then you type following commands:
+
+  1) ./configure
+  2) make
+  3) make test
+  4) make install 
+
+Then, go to Blis-0.8/Blis/example
+  5) make
+
+Step 5) creates an executable blis that you can run as
+
+  ./blis -par blis.par
+
+
+2. Parallel Solver (MPI as message passing interface) 
+-----------------------------------------------------
+
+Configuration and and compilation of the MPI parallel solver is system
+dependent. The user has to specify options --with-mpi-incdir, --with-mpi-lib,
+MPICC, and MPICXX. The following is an example.
+
+Go into the directory that you just downloaded or extracted (e.g. Blis-0.8),
+type
+
+  1) ./configure --enable-debug --with-mpi-incdir=/usr/local/mpich/include --with-mpi-lib='-L/usr/local/mpich/lib  -lmpich -lpthread -lrt' MPICC=mpicc MPICXX=mpiCC
+  2) make 
+  3) make install
+
+Then, go to Blis-0.8/Blis/example
+  4) make
+
+Step 4) creates an executable blis that you can issue mpirun like 
+(assume MPICH)
+
+  mpirun -np 8 -machinefile machines ./blis -par blis.par
+
+You might want to specify other options, in case you don't want to 
+use the default choices that configure makes (e.g., compilers). 
+Please visit
+
+   https://projects.coin-or.org/BuildTools
+
+and the COPS Trac page
+
+   https://projects.coin-or.org/Cops
+
+for more information.
