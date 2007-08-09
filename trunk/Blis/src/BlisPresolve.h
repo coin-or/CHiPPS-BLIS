@@ -46,7 +46,7 @@ public:
     /** Default constructor (empty object) */
     BlisPresolve() :
         preMatrix_(0), 
-        postMatrix_(0) {};
+        postMatrix_(0) {}
     
     /** Virtual destructor */
     virtual ~BlisPresolve() { 

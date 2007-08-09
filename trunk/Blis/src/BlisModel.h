@@ -513,7 +513,7 @@ protected:
     int getNumSolutions() const { return numSolutions_; }
     
     /** Get number of heuristic solutions. */
-    int getNumHeurSolutions() const { return numHeurSolutions_;};  
+    int getNumHeurSolutions() const { return numHeurSolutions_;}  
     
     /** Return best ip solution found so far. */
     double * incumbent() { return incumbent_; }
@@ -596,7 +596,7 @@ protected:
     inline void setNumObjects(int num) { numObjects_ = num; }
 
     /** Get the array of objects. */
-    inline BcpsObject ** objects() { return objects_;};
+    inline BcpsObject ** objects() { return objects_;}
 
     /** Get the specified object. */
     inline BcpsObject * objects(int which) { return objects_[which]; }
