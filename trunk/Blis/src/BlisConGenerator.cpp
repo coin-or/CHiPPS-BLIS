@@ -168,7 +168,8 @@ BlisConGenerator::generateConstraints(BcpsConstraintPool &conPool)
     
     if (generator) {
 	// It is CglProbing - return tight column bounds
-	generator->generateCutsAndModify(*solver, newOsiCuts);
+        CglTreeInfo info;
+	generator->generateCutsAndModify(*solver, newOsiCuts, &info);
 	const double * tightLower = generator->tightLower();
 	const double * lower = solver->getColLower();
 	const double * tightUpper = generator->tightUpper();
