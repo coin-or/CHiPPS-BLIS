@@ -1,0 +1,19 @@
+Instance                 Node   Ramp-up   Idle   Ramp-down   Wallclock 
+----------------------------------------------------------------------
+aflow30a                628941    8.27    1.31   1.17        114.41 
+bienst2                 370389    59.63   1.74   1.89        517.22 
+fc.60.20.4.mps           (Parallel BLIS can not solve)
+liu                      (No solver can solve)
+mik.250-10-100.1.mps    1314992   5.03    1.45   0.38        155.45
+mas76                   1331011   0.43    0.89   0.39        21.75  
+nexp.50.20.1.1.mps       (Parallel BLIS can not solve)
+rout                    364675    3.28    0.56   0.36        31.59  
+sp97ar.mps               (No solver can solve)
+swath2                  84551     12.29   4.05   3.97        75.23  
+t1717                    (No solver can solve)
+----------------------------------------------------------------------
+
+NOTE: These instances can not be solved by serial BLIS in 3 hours.
+NOTE: The test was performed on Clemson's Axiom cluster, which has
+52 dual core (1.6GHz, 4G RAM). The table show the results by
+using 64 processors.

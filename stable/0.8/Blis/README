@@ -1,0 +1,62 @@
+BLIS Version 0.8 README
+=======================
+
+Welcome to Blis. Blis is distributed under the Common Public License
+Version 1.0 and is freely redistributable. All source code and documentation 
+is Copyright 2001-2007 by Lehigh University, Yan Xu, Ted Ralphs, and others.
+This README may be distributed freely.
+
+WHAT IS BLIS?
+=============
+
+Blis is one of the libraries that make up the Cops (COIN Open Parallel Search
+Framework) library hierarchy. It is a solver for mixed integer linear programs
+(MILPs) built on top of the two other libraries in the hierarchy, Bcps and
+Alps. Blis has most of the features of a modern MILP solver, but can take
+advantage of the ability of Alps and Bcps to run in parallel. It can be easily
+customized for special problem classes.
+
+PROJECT WEB PAGE
+================
+
+https://projects.coin-or.org/Cops
+
+DOCUMENTATION
+=============
+
+The html documentation of the classes in Blis (See INSTALL file) can be
+created. A user's guide that is under preparation that can help with running
+or customizing Blis.
+
+INSTALLATION
+============
+
+Please see the INSTALL file for a guide to install Blis.
+
+SUPPORT
+=======
+
+1. Authors
+
+Source Code:
+
+Yan Xu (yax2@lehigh.edu)
+Ted Ralphs (tkralphs@lehigh.edu), Project Manager
+
+Original Conceptual Design:
+
+Yan Xu (yax2@lehigh.edu)
+Ted Ralphs (tkralphs@lehigh.edu), Project Manager
+Laci Ladanyi (ladanyi@us.ibm.com)
+Matt Saltzman (mjs@clemson.edu)
+
+2. List Serve
+
+Cops users should use the Coin-Discuss mailing list. To subscribe, go to 
+http://list.coin-or.org/mailman/listinfo/cops
+
+3. Bug Reports
+
+Bug reports should be reported on the Cops development web site at
+
+https://projects.coin-or.org/Cops/newticket

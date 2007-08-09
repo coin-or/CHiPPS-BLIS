@@ -1,0 +1,95 @@
+# !/bin/bash
+
+ProbDir=/home/yanxu/data/mip
+
+echo "air05"
+echo Problem = air05 > out.parallel/air05.out.$1
+mpirun -np $1 -machinefile machines ../blis -param blis.par -Alps_instance $ProbDir/air05.mps >> out.parallel/air05.out.$1
+
+echo "bell5"
+echo Problem = bell5 > out.parallel/bell5.out.$1
+mpirun -np $1 -machinefile machines ../blis -param blis.par -Alps_instance $ProbDir/bell5.mps >> out.parallel/bell5.out.$1
+
+echo "bienst1"
+echo Problem = bienst1 > out.parallel/bienst1.out.$1
+mpirun -np $1 -machinefile machines ../blis -param blis.par -Alps_instance $ProbDir/bienst1.mps >> out.parallel/bienst1.out.$1
+
+echo "cls.T90.C3.F100.S4"
+echo Problem = cls.T90.C3.F100.S4 > out.parallel/cls.T90.C3.F100.S4.out.$1
+mpirun -np $1 -machinefile machines ../blis -param blis.par -Alps_instance $ProbDir/cls.T90.C3.F100.S4.mps >> out.parallel/cls.T90.C3.F100.S4.out.$1
+
+echo "cls.T90.C4.F100.S1"
+echo Problem = cls.T90.C4.F100.S1 > out.parallel/cls.T90.C4.F100.S1.out.$1
+mpirun -np $1 -machinefile machines ../blis -param blis.par -Alps_instance $ProbDir/cls.T90.C4.F100.S1.mps >> out.parallel/cls.T90.C4.F100.S1.out.$1
+
+echo "cls.T90.C4.F100.S3"
+echo Problem = cls.T90.C4.F100.S3 > out.parallel/cls.T90.C4.F100.S3.out.$1
+mpirun -np $1 -machinefile machines ../blis -param blis.par -Alps_instance $ProbDir/cls.T90.C4.F100.S3.mps >> out.parallel/cls.T90.C4.F100.S3.out.$1
+
+echo "dano3_4"
+echo Problem = dano3_4 > out.parallel/dano3_4.out.$1
+mpirun -np $1 -machinefile machines ../blis -param blis.par -Alps_instance $ProbDir/dano3_4.mps >> out.parallel/dano3_4.out.$1
+
+echo "fc.60.20.3"
+echo Problem = fc.60.20.3 > out.parallel/fc.60.20.3.out.$1
+mpirun -np $1 -machinefile machines ../blis -param blis.par -Alps_instance $ProbDir/fc.60.20.3.mps >> out.parallel/fc.60.20.3.out.$1
+
+echo "fc.60.20.6"
+echo Problem = fc.60.20.6 > out.parallel/fc.60.20.6.out.$1
+mpirun -np $1 -machinefile machines ../blis -param blis.par -Alps_instance $ProbDir/fc.60.20.6.mps >> out.parallel/fc.60.20.6.out.$1
+
+echo "fc.60.20.7"
+echo Problem = fc.60.20.7 > out.parallel/fc.60.20.7.out.$1
+mpirun -np $1 -machinefile machines ../blis -param blis.par -Alps_instance $ProbDir/fc.60.20.7.mps >> out.parallel/fc.60.20.7.out.$1
+
+echo "fiber"
+echo Problem = fiber > out.parallel/fiber.out.$1
+mpirun -np $1 -machinefile machines ../blis -param blis.par -Alps_instance $ProbDir/fiber.mps >> out.parallel/fiber.out.$1
+
+echo "gesa3_o"
+echo Problem = gesa3_o > out.parallel/gesa3_o.out.$1
+mpirun -np $1 -machinefile machines ../blis -param blis.par -Alps_instance $ProbDir/gesa3_o.mps >> out.parallel/gesa3_o.out.$1
+
+echo "misc07"
+echo Problem = misc07 > out.parallel/misc07.out.$1
+mpirun -np $1 -machinefile machines ../blis -param blis.par -Alps_instance $ProbDir/misc07.mps >> out.parallel/misc07.out.$1
+
+echo "neos21"
+echo Problem = neos21 > out.parallel/neos21.out.$1
+mpirun -np $1 -machinefile machines ../blis -param blis.par -Alps_instance $ProbDir/neos21.mps >> out.parallel/neos21.out.$1
+
+echo "neos2"
+echo Problem = neos2 > out.parallel/neos2.out.$1
+mpirun -np $1 -machinefile machines ../blis -param blis.par -Alps_instance $ProbDir/neos2.mps >> out.parallel/neos2.out.$1
+
+echo "nexp.50.20.2.5"
+echo Problem = nexp.50.20.2.5 > out.parallel/nexp.50.20.2.5.out.$1
+mpirun -np $1 -machinefile machines ../blis -param blis.par -Alps_instance $ProbDir/nexp.50.20.2.5.mps >> out.parallel/nexp.50.20.2.5.out.$1
+
+echo "nw04"
+echo Problem = nw04 > out.parallel/nw04.out.$1
+mpirun -np $1 -machinefile machines ../blis -param blis.par -Alps_instance $ProbDir/nw04.mps >> out.parallel/nw04.out.$1
+
+echo "p0548"
+echo Problem = p0548 > out.parallel/p0548.out.$1
+mpirun -np $1 -machinefile machines ../blis -param blis.par -Alps_instance $ProbDir/p0548.mps >> out.parallel/p0548.out.$1
+
+echo "qiu"
+echo Problem = qiu > out.parallel/qiu.out.$1
+mpirun -np $1 -machinefile machines ../blis -param blis.par -Alps_instance $ProbDir/qiu.mps >> out.parallel/qiu.out.$1
+
+echo "sp98ir"
+echo Problem = sp98ir > out.parallel/sp98ir.out.$1
+mpirun -np $1 -machinefile machines ../blis -param blis.par -Alps_instance $ProbDir/sp98ir.mps >> out.parallel/sp98ir.out.$1
+
+echo "stein45"
+echo Problem = stein45 > out.parallel/stein45.out.$1
+mpirun -np $1 -machinefile machines ../blis -param blis.par -Alps_instance $ProbDir/stein45.mps >> out.parallel/stein45.out.$1
+
+echo "swath2"
+echo Problem = swath2 > out.parallel/swath2.out.$1
+mpirun -np $1 -machinefile machines ../blis -param blis.par -Alps_instance $ProbDir/swath2.mps >> out.parallel/swath2.out.$1
+
+echo "vpm2"
+echo Problem = vpm2 > out.parallel/vpm2.out.$1
+mpirun -np $1 -machinefile machines ../blis -param blis.par -Alps_instance $ProbDir/vpm2.mps >> out.parallel/vpm2.out.$1
