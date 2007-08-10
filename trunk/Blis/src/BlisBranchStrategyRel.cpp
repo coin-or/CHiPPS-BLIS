@@ -403,7 +403,8 @@ BlisBranchStrategyRel::createCandBranchObjects(int numPassesLeft)
             score = infObjects[i]->pseudocost().getScore();
             sumDeg += score;
             
-            sortedObjects.insert(std::make_pair(score, infObjects[i])); 
+	    std::pair<const double, BlisObjectInt*> sa(score, infObjects[i]);
+            sortedObjects.insert(sa);
             
 #ifdef BLIS_DEBUG_MORE
             std::cout << "col[" << infObjects[i]->columnIndex() << "]="
