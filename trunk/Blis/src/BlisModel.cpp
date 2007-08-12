@@ -1721,7 +1721,7 @@ BlisModel::packSharedKnowlege()
     int k = 0;
     int numPseudcosts = 0;
     int numCons = 0;
-    int numVars = 0;
+    //int numVars = 0;
     int frequency = -1, depth = -1;
     int phase = broker_->getPhase();
 

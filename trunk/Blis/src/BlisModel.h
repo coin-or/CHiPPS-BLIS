@@ -776,7 +776,7 @@ protected:
 	else return 1000;
     }
     
-    inline const double getNodeWeight() const { return nodeWeight_; }
+    inline double getNodeWeight() const { return nodeWeight_; }
 
     inline void setNodeWeight(double nw) { nodeWeight_ = nw; }
     //@}

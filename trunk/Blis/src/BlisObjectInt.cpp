@@ -168,7 +168,7 @@ BlisObjectInt::createBranchObject(BcpsModel *m, int direction) const
     BlisModel *model = dynamic_cast<BlisModel* >(m);
     OsiSolverInterface * solver = model->solver();
     
-    double integerTolerance = model->BlisPar()->entry(BlisParams::integerTol);
+    //double integerTolerance = model->BlisPar()->entry(BlisParams::integerTol);
     
     const double * solution = solver->getColSolution();
     const double * lower = solver->getColLower();

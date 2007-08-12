@@ -85,7 +85,7 @@ BlisHeurRound::searchSolution(double & solutionValue, double * betterSolution)
     // Start to search solution ...
     //------------------------------------------------------
 
-    double start = CoinCpuTime();
+    //double start = CoinCpuTime();
     
     // Get a copy of original matrix (and by row for rounding);
     matrix_ = *(model_->solver()->getMatrixByCol());
