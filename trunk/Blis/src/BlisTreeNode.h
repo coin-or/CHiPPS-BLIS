@@ -137,7 +137,8 @@ public:
 
     /** To be defined. */
     virtual int chooseBranchingObject(BcpsModel*) { return AlpsReturnStatusOk;}
-    
+
+    using BcpsTreeNode::generateConstraints ;
     /** Generate constraints. */
     int generateConstraints(BlisModel *model, BcpsConstraintPool &conPool);
 
@@ -160,6 +161,7 @@ public:
     /** Return variable pool. */
     //BcpsVariablePool * variablePool() { return variablePool_; }
     
+    using AlpsKnowledge::encode ;
     /** Encode this node for message passing. */
     virtual AlpsEncoded* encode() const;
 

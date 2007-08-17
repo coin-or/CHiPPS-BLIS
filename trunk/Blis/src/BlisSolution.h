@@ -75,6 +75,7 @@ class BlisSolution : public BcpsSolution {
 	return NULL. */
     // BlisIpSolution* testIntegrality(const double etol = 1e-5) const; 
     
+    using AlpsKnowledge::encode ;
     /** The method that encodes the solution into a encoded object. */
     virtual AlpsEncoded* encode() const {
 	AlpsEncoded* encoded = new AlpsEncoded(AlpsKnowledgeTypeSolution);

@@ -857,6 +857,7 @@ protected:
 
     virtual void registerKnowledge();  
 
+    using AlpsKnowledge::encode ;
     /** The method that encodes the model into an encoded object. */
     virtual AlpsEncoded* encode() const;
     

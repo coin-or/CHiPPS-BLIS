@@ -101,6 +101,7 @@ class BlisConstraint : public BcpsConstraint {
     /** Check if violates a given lp solution. */
     double violation(const double *lpSolution);
 
+    using AlpsKnowledge::encode ;
     /** Pack into a encode object. */
     virtual AlpsReturnStatus encode(AlpsEncoded *encoded);
     

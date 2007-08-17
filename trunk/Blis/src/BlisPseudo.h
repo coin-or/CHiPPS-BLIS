@@ -150,6 +150,7 @@ public:
     /** Unpack pseudocost from the given encode object. */
     AlpsReturnStatus decodeFrom(AlpsEncoded &encoded);
 
+    using AlpsKnowledge::encode ;
     /** Encode this node for message passing. */
     virtual AlpsEncoded* encode() const;
 

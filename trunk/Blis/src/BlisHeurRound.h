@@ -80,7 +80,8 @@ class BlisHeurRound : public BlisHeuristic {
     
     /** update model (This is needed if cliques update matrix etc). */
     virtual void setModel(BlisModel * model);
-    
+
+    using BlisHeuristic::searchSolution ;
     /** returns 0 if no solution, 1 if valid solution
         with better objective value than one passed in
         Sets solution values if good, sets objective value (only if good)

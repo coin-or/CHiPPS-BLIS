@@ -130,6 +130,7 @@ class BlisVariable : public BcpsVariable {
     
  public:
     
+    using AlpsKnowledge::encode ;
     /** Pack to a encode object. */
     virtual AlpsReturnStatus encode(AlpsEncoded *encoded){
 	AlpsReturnStatus status;
