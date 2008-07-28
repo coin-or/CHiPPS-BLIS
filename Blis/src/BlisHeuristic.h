@@ -151,7 +151,7 @@ public:
 	BlisHeuristic *h = NULL;
 	assert(0);
 	return h;
-    };
+    }
     
     /** returns 0 if no solution, 1 if valid solution
         with better objective value than one passed in
