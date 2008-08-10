@@ -321,7 +321,7 @@ EXTRA_DIST = examples/BlisMain.cpp examples/blis.par \
 #                  Installation of the addlibs file                    #
 ########################################################################
 addlibsfile = blis_addlibs.txt
-addlibsdir = $(prefix)/share/doc/coin/$(PACKAGE_NAME)/
+addlibsdir = $(prefix)/share/doc/coin/$(PACKAGE_NAME)
 
 ########################################################################
 #                         Maintainer Stuff                             #
@@ -794,7 +794,7 @@ install-exec-local: install-doc
 	$(install_sh_DATA) $(addlibsfile) $(addlibsdir)/$(addlibsfile)
 
 uninstall-local: uninstall-doc
-	rm -f $(DESTDIR)$(libdir)/$(addlibsfile)
+	rm -f $(addlibsdir)/$(addlibsfile)
 
 install-doc: $(DocFiles)
 	test -z "$(DocInstallDir)" || $(mkdir_p) "$(DESTDIR)$(DocInstallDir)"
