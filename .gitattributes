@@ -1,4 +1,5 @@
 * text=auto !eol
+/.travis.yml -text
 Blis/AUTHORS -text
 Blis/LICENSE -text
 Blis/MSVisualStudio/v10/Blis.sln -text
