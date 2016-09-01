@@ -151,6 +151,7 @@ BlisModel::init()
     numNodes_ = 0;
     numIterations_ = 0;
     aveIterations_ = 0;
+    feasCheckTime_ = 0;
     
     branchStrategy_ = NULL;
     rampUpBranchStrategy_ = NULL;
@@ -1648,6 +1649,8 @@ BlisModel::feasibleSolutionHeur(const double *solution)
     double value, nearest, objValue = 0.0;
     double *rowAct = NULL;
     
+    double start = CoinWallclockTime();
+
     BlisSolution *blisSol = NULL;
     
     // Check if within column bounds
@@ -1737,6 +1740,8 @@ TERM_FEAS_HEUR:
     }
     
     if (rowAct) delete [] rowAct;
+
+    addFeasCheckTime(CoinWallclockTime(start)-start);
     return blisSol;
 }
 
@@ -1750,7 +1755,9 @@ BlisModel::feasibleSolution(int & numIntegerInfs, int & numObjectInfs)
 
     bool userFeasible = true;
     double sumUnsatisfied = 0.0;
-    
+
+    double start = CoinWallclockTime();
+
     BlisSolution* sol = NULL;
 
     for (j = 0; j < numIntObjects_; ++j) {
@@ -1799,6 +1806,7 @@ BlisModel::feasibleSolution(int & numIntegerInfs, int & numObjectInfs)
                                objSense_ * getLpObjValue());
     }
     
+    addFeasCheckTime(CoinWallclockTime()-start);
     return sol;
 }
 
@@ -2232,6 +2240,8 @@ BlisModel::modelLog()
         
         if (msgLevel > 0) {
             int k;
+	    blisMessageHandler()->message(BLIS_FEAS_CHECK_TIME,
+					  blisMessages()) << feasCheckTime_;
             for (k = 0; k < numCutGenerators_; ++k) {
                 if (cutGenerators(k)->calls() > 0) {
                     blisMessageHandler()->message(BLIS_CUT_STAT_FINAL,

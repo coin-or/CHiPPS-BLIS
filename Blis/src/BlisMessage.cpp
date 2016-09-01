@@ -47,6 +47,7 @@ static Blis_message us_english[]=
     {BLIS_HEUR_STAT_NODE, 65, 1, "Node %d, called %s heuristic %d times, found %d solutions, CPU time %.4f seconds, current strategy %d"},
     {BLIS_ROOT_PROCESS, 30, 1, "Processing the root node (%d rows, %d columns)"},
     {BLIS_ROOT_TIME, 35, 1, "Processing the first root relaxation took CPU time %.4f seconds"},
+    {BLIS_FEAS_CHECK_TIME, 40, 1, "Checking feasibility took %.4f seconds"},
     {BLIS_W_LP, 20, 1, "WARNING: The Problem does not have integer variables"},
     {BLIS_DUMMY_END, 999999, 0, ""}
 };
