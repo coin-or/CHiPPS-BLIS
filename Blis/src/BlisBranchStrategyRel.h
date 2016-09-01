@@ -43,6 +43,8 @@ class BlisBranchStrategyRel : public BcpsBranchStrategy {
     /** Illegal Assignment operator.*/
     BlisBranchStrategyRel& operator=(const BlisBranchStrategyRel& rhs);
 
+ protected:
+    
     int relibility_;
     
  public:
