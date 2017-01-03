@@ -1787,8 +1787,8 @@ BlisModel::feasibleSolution(int & numIntegerInfs, int & numObjectInfs)
 	std::cout << "FEASIBLE SOL: numUnsatisfied = " 
 		  << numUnsatisfied << std::endl;
     }
-
-    if (!numUnsatisfied) {
+    //sahar
+    //if (!numUnsatisfied) {
         sol = userFeasibleSolution(getLpSolution(), userFeasible);
         if (broker_->getMsgLevel() > 200 && sol && userFeasible) {
             std::cout << "FEASIBLE HEUR: pass user feasibility check." << std::endl;
@@ -1797,7 +1797,8 @@ BlisModel::feasibleSolution(int & numIntegerInfs, int & numObjectInfs)
 	    // User doesn't provide feasibility check.
 	    numBranchResolve_ = 10;
 	}
-    }
+	//sahar
+	//}
 
     if (!numUnsatisfied && userFeasible && !sol) {
         // User doesn't overload feasible solution function.
