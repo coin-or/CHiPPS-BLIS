@@ -17,7 +17,7 @@
  *          Matthew Saltzman, Clemson University                             *
  *                                                                           * 
  *                                                                           *
- * Copyright (C) 2001-2013, Lehigh University, Yan Xu, and Ted Ralphs.       *
+ * Copyright (C) 2001-2015, Lehigh University, Yan Xu, and Ted Ralphs.       *
  * All Rights Reserved.                                                      *
  *===========================================================================*/
 
@@ -27,13 +27,13 @@
 /***************************************************************************/
 
 /* Version number of project */
-#define BLIS_VERSION "0.94"
+#define BLIS_VERSION "trunk"
 
 /* Major Version number of project */
-#define BLIS_VERSION_MAJOR 0
+#define BLIS_VERSION_MAJOR   9999
 
 /* Minor Version number of project */
-#define BLIS_VERSION_MINOR 94
+#define BLIS_VERSION_MINOR   9999
 
 /* Release Version number of project */
 #define BLIS_VERSION_RELEASE 9999

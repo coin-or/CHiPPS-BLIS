@@ -17,7 +17,7 @@
  *          Matthew Saltzman, Clemson University                             *
  *                                                                           * 
  *                                                                           *
- * Copyright (C) 2001-2013, Lehigh University, Yan Xu, and Ted Ralphs.       *
+ * Copyright (C) 2001-2015, Lehigh University, Yan Xu, and Ted Ralphs.       *
  * All Rights Reserved.                                                      *
  *===========================================================================*/
 
@@ -48,6 +48,7 @@ enum BLIS_Message
     BLIS_HEUR_STAT_NODE,
     BLIS_ROOT_PROCESS,
     BLIS_ROOT_TIME,
+    BLIS_FEAS_CHECK_TIME,
     BLIS_W_LP,
     ///
     BLIS_DUMMY_END

@@ -17,7 +17,7 @@
  *          Matthew Saltzman, Clemson University                             *
  *                                                                           * 
  *                                                                           *
- * Copyright (C) 2001-2013, Lehigh University, Yan Xu, and Ted Ralphs.       *
+ * Copyright (C) 2001-2015, Lehigh University, Yan Xu, and Ted Ralphs.       *
  * All Rights Reserved.                                                      *
  *===========================================================================*/
 
@@ -273,7 +273,7 @@ BlisTreeNode::process(bool isRoot, bool rampUp)
     }
     else if (cutStrategy == BlisCutStrategyAuto) {
 	if (depth_ < maxConstraintDepth) {
-            if (!diving_ || isRoot) genConsHere = true;
+            genConsHere = true;
 	}
     }
     else if (cutStrategy == BlisCutStrategyPeriodic) {
@@ -404,9 +404,10 @@ BlisTreeNode::process(bool isRoot, bool rampUp)
         
         switch(lpStatus) {
         case BlisLpStatusOptimal:
+
             // Check if IP feasible 
-            ipSol = model->feasibleSolution(numIntInfs, numObjInfs);
-            
+	    ipSol = model->feasibleSolution(numIntInfs, numObjInfs);
+
             if (ipSol) {         
                 // IP feasible
                 model->storeSolution(BlisSolutionTypeBounding, ipSol);
@@ -2778,7 +2779,7 @@ BlisTreeNode::generateConstraints(BlisModel *model,BcpsConstraintPool &conPool)
 	}
 	else if (strategy == BlisCutStrategyAuto) {
 	    if (depth_ < maxConstraintDepth) {
-		if (!diving_ || model->isRoot_) useThisCutGenerator = true;
+		useThisCutGenerator = true;
 	    }
 	}
 	else if (strategy == BlisCutStrategyPeriodic) {
@@ -2796,7 +2797,6 @@ BlisTreeNode::generateConstraints(BlisModel *model,BcpsConstraintPool &conPool)
 #if 0
 	std::cout<<"CUTGEN: " << model->cutGenerators(i)->name() 
 		 <<": useThisCutGenerator ="<<useThisCutGenerator
-                 <<", diving =" << diving_
 		 << ", strategy =" << strategy 
 		 << ", num of nodes =" << model->getNumNodes()
 		 <<std::endl;

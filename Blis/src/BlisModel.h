@@ -17,7 +17,7 @@
  *          Matthew Saltzman, Clemson University                             *
  *                                                                           * 
  *                                                                           *
- * Copyright (C) 2001-2013, Lehigh University, Yan Xu, and Ted Ralphs.       *
+ * Copyright (C) 2001-2015, Lehigh University, Yan Xu, and Ted Ralphs.       *
  * All Rights Reserved.                                                      *
  *===========================================================================*/
 
@@ -267,6 +267,9 @@ protected:
 
     /** Average number of lp iterations to solve a subproblem. */
     int aveIterations_;
+
+    /** Time spent checking feasibility of solutions **/
+    double feasCheckTime_;
     
     //------------------------------------------------------
     // TEMPORARY STORAGE
@@ -465,6 +468,15 @@ protected:
     
     /** Set the maximum number of resolve during branching. */ 
     void setNumBranchResolve(int num) { numBranchResolve_ = num; }
+
+    /** Get the total time spent checking solutions for feasibility. */
+    int getFeasCheckTime() { return feasCheckTime_; }
+    
+    /** Set the total time spent checking solutions for feasibility. */ 
+    void setFeasCheckTime(double t) { feasCheckTime_ = t; }
+
+    /** Add to the time spent checking solutions for feasibility. */ 
+    void addFeasCheckTime(double t) { feasCheckTime_ += t; }
 
     //------------------------------------------------------
     // PROBLEM DATA
