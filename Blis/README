@@ -1,9 +1,9 @@
-BLIS Version 0.93 README
+BLIS Version 0.94 README
 =========================
 
 Welcome to BLIS. BLIS is distributed under the Eclipse Public License and is
 freely redistributable. All source code and documentation is Copyright
-2001-2013 by Lehigh University, Yan Xu, and Ted Ralphs. This README may be
+2001-2017 by Lehigh University, Yan Xu, and Ted Ralphs. This README may be
 distributed freely.
 
 WHAT IS BLIS?
@@ -43,7 +43,7 @@ SUPPORT
 1. Authors
 
 Yan Xu (yax2@lehigh.edu)
-Ted Ralphs (tkralphs@lehigh.edu), Project Manager
+Ted Ralphs (ted@lehigh.edu), Project Manager
 Laci Ladanyi (ladanyi@us.ibm.com)
 Matt Saltzman (mjs@clemson.edu)
 
