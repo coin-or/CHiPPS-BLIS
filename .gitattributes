@@ -152,6 +152,7 @@ Blis/test/blis.par -text
 /Makefile.am -text
 /Makefile.in -text
 /README -text
+/README.md -text
 /TODO -text
 /appveyor.yml -text
 /config.guess -text

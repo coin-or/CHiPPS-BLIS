@@ -13,10 +13,11 @@ Windows at
 ***                         DOWNLOAD                               ***
 **********************************************************************
 
-Pre-built binaries are available for some versions of BLIS on some
-platforms. They can be downloaded at
+BLIS has been packaged for some Linux distributions and is in the
+process of being packaged for Homebrew on OS X. For Windows, pre-built
+binaries are available as part of the COIN-OR Optimization Suite:
 
-  http://www.coin-or.org/download/binary/Blis
+https://www.coin-or.org/download/binary/OptimizationSuite/
 
 If you would like to build from source, you can obtain the source code for
 BLIS in two ways:
@@ -25,13 +26,13 @@ BLIS in two ways:
    (recommended). For this, you need a subversion client installed. For a
    command-line client, check out the code with
 
-   svn co https://projects.coin-or.org/svn/CHiPPS/Blis/stable/0.93 Blis-0.93
+   svn co https://projects.coin-or.org/svn/CHiPPS/Blis/stable/0.94 Blis-0.94
 
 2. Download the source in a compressed file from from
    http://www.coin-or.org/download/source/Blis and
    extract it, for example, with
 
-   tar -xzvf Blis-0.93.0.tgz
+   tar -xzvf Blis-0.94.0.tgz
 
    More detailed download instructions can be found at
 
@@ -45,7 +46,7 @@ BLIS in two ways:
 ----------------
 
 Switch to the directory in which you just downloaded or extracted the source
-(e.g., Blis-0.93) and execute the following commands:
+(e.g., Blis-0.94) and execute the following commands:
 
   1) ./configure
   2) make

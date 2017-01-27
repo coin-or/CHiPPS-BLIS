@@ -6,6 +6,18 @@ freely redistributable. All source code and documentation is Copyright
 2001-2017 by Lehigh University, Yan Xu, and Ted Ralphs. This README may be
 distributed freely.
 
+TESTING STATUS
+==============
+
+[![Build Status](https://travis-ci.org/coin-or/CHiPPS-BLIS.svg?branch=master)](https://travis-ci.org/coin-or/CHiPPS-BLIS)
+
+[![Build status](https://ci.appveyor.com/api/projects/status/aj8ibib6m4sphnwh?svg=true)](https://ci.appveyor.com/project/tkralphs/chipps-alps)
+
+CITE
+====
+
+[![DOI](https://zenodo.org/badge/23727016.svg)](https://zenodo.org/badge/latestdoi/23727016)
+
 WHAT IS BLIS?
 =============
 
