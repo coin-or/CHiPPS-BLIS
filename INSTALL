@@ -19,6 +19,10 @@ binaries are available as part of the COIN-OR Optimization Suite:
 
 https://www.coin-or.org/download/binary/OptimizationSuite/
 
+Automatically generated binaries are also available from BinTray:
+
+https://bintray.com/coin-or/download/CHiPPS-BLIS
+
 If you would like to build from source, you can obtain the source code for
 BLIS in two ways:
 
