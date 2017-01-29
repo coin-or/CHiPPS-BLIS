@@ -11,7 +11,7 @@ TESTING STATUS
 
 [![Build Status](https://travis-ci.org/coin-or/CHiPPS-BLIS.svg?branch=master)](https://travis-ci.org/coin-or/CHiPPS-BLIS)
 
-[![Build status](https://ci.appveyor.com/api/projects/status/aj8ibib6m4sphnwh?svg=true)](https://ci.appveyor.com/project/tkralphs/chipps-alps)
+[![Build status](https://ci.appveyor.com/api/projects/status/2y0qycsrajndtkgs?svg=true)](https://ci.appveyor.com/project/tkralphs/chipps-blis)
 
 DOWNLOAD
 ========
