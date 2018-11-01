@@ -6,5 +6,5 @@ CoinUtils     https://projects.coin-or.org/svn/CoinUtils/trunk/CoinUtils
 Osi           https://projects.coin-or.org/svn/Osi/stable/0.107/Osi
 Clp           https://projects.coin-or.org/svn/Clp/stable/1.16/Clp
 Cgl           https://projects.coin-or.org/svn/Cgl/stable/0.59/Cgl
-CHiPPS-ALPS   https://github.com/coin-or/CHiPPS-Alps/truALPS master
+CHiPPS-ALPS   https://github.com/coin-or/CHiPPS-ALPS master
 CHiPPS-BiCePS https://github.com/coin-or/CHiPPS-BiCePS master
