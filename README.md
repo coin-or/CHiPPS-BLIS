@@ -3,7 +3,7 @@ BLIS Version 0.94 README
 
 Welcome to BLIS. BLIS is distributed under the Eclipse Public License and is
 freely redistributable. All source code and documentation is Copyright
-2001-2017 by Lehigh University, Yan Xu, and Ted Ralphs. This README may be
+2001-2019 by Lehigh University, Yan Xu, and Ted Ralphs. This README may be
 distributed freely.
 
 TESTING STATUS
