@@ -29,7 +29,7 @@
 
 AC_PREREQ(2.59)
 
-AC_INIT([Blis],[trunk],[https://projects.coin-or.org/Alps/newticket])
+AC_INIT([Blis],[trunk],[https://github.com/coin-or/CHiPPS-BLIS/issues/new])
 
 AC_COPYRIGHT([
 #==========================================================================#
