@@ -85,7 +85,7 @@ class BlisBranchStrategyRel : public BcpsBranchStrategy {
 				   BcpsBranchObject * bestSoFar);
 
     /** Create a set of candidate branching objects. */
-    int createCandBranchObjects(int numPassesLeft, double ub);
+    virtual int createCandBranchObjects(int numPassesLeft, double ub);
 };
 
 #endif
