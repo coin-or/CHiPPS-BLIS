@@ -470,7 +470,7 @@ protected:
     void setNumBranchResolve(int num) { numBranchResolve_ = num; }
 
     /** Get the total time spent checking solutions for feasibility. */
-    int getFeasCheckTime() { return feasCheckTime_; }
+    double getFeasCheckTime() { return feasCheckTime_; }
     
     /** Set the total time spent checking solutions for feasibility. */ 
     void setFeasCheckTime(double t) { feasCheckTime_ = t; }
