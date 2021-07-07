@@ -54,6 +54,10 @@ class BlisParams : public AlpsParameterSet {
       /** Share pseudocost during search
 	  Default: false */
       sharePseudocostSearch,
+      /** Whether to check whether solutions are feasible during
+          strong branching
+	  Default: true */
+      checkFeasibleInBranch,
       //
       endOfChrParams
   };

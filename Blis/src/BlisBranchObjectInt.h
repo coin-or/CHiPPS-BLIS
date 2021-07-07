@@ -112,6 +112,15 @@ class BlisBranchObjectInt : public BcpsBranchObject {
             down_[1] = floor(value_);
             up_[0] = ceil(value_);
             up_[1] = model->getColUpper()[iColumn];
+	    //start:sahar
+	    if (up_[0]==down_[1]) {
+		if (up_[0]==floor(up_[1])) {
+		    down_[1]-=1;
+		}
+		else {
+		    up_[0]+=1;
+		}
+	    }//end:sahar 
         }
     
     /** Create a degenerate branching object.

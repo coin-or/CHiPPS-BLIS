@@ -1,4 +1,0 @@
-language: cpp
-env:
-  global: 
-    - secure: "YXw3gWbrrN5pxLfwjQdymchep9FvfwB3cFofN+PXk4T9hNomsTkrDUDBrL/mifMSAXq7ITeKg8EaIUiIIGI7pSHP/ZEnyIB7VYO9ggJ2izxlFNGA20NfoJ3Yrch3AnYiQDswsCFlngfqeOgwvuIQMUp/Sn1EcWiEGT+VZhuGY4o="

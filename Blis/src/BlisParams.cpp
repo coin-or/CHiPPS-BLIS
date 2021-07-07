@@ -57,6 +57,9 @@ BlisParams::createKeywordList() {
    keys_.push_back(make_pair(std::string("Blis_sharePseudocostSearch"),
 			     AlpsParameter(AlpsBoolPar,
 					   sharePseudocostSearch)));
+   keys_.push_back(make_pair(std::string("Blis_checkFeasibleInBranch"),
+			     AlpsParameter(AlpsBoolPar,
+					   checkFeasibleInBranch)));
     
   //--------------------------------------------------------
   // BoolArrayPar
@@ -221,7 +224,8 @@ BlisParams::setDefaultEntries() {
   setEntry(shareVariables, false);
   setEntry(sharePseudocostRampUp, true);
   setEntry(sharePseudocostSearch, false);
-
+  setEntry(checkFeasibleInBranch, true);
+  
   //-------------------------------------------------------------
   // Int Parameters.
   //-------------------------------------------------------------

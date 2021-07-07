@@ -1,0 +1,86 @@
+Description:
+  Slug: CHiPPS-BLIS
+  ShortName: Blis
+  LongName: BiCePS Linear Integer Solver
+  ShortDescription: The BiCePS Linear Integer Solver is a concretization of the BiCePS layer in the CHiPPS framework.
+  LongDescription: |2
+    The Branch, Constrain, and Price Software (BiCePS) is a data management
+    layer for CHiPPS, the COIN-OR High Performance Parallel Search Framework.
+    CHiPPS is a framework for implementing parallel algorithms based on tree
+    search. BiCePS is built on top of ALPS and provides functionality for
+    implementing relaxation-based branch-and-bound algorithms.
+  Manager: Ted Ralphs, ted at lehigh dot edu 
+  Homepage: https://github.com/coin-or/CHiPPS-BLIS
+  License: Eclipse Public License 2.0
+  LicenseURL: http://www.opensource.org/licenses/eclipse-2.0
+  Zenodo: 23727016
+  IncludedIn:
+    Package: CHiPPS-BLIS
+  Language:
+    - C++
+  Categories: 
+    - Optimization deterministic linear discrete
+    - Optimization utility
+
+Dependencies:
+  - Description: Sample data files
+    URL: https://projects.coin-or.org/svn/Data/Sample/stable/1.2
+    Version: master
+    Required: Required
+  - Description: COIN-OR Utilities
+    URL: https://projects.coin-or.org/svn/CoinUtils/stable/2.11/CoinUtils
+    Version: master
+    Required: Required
+  - Description: Open Solver Interface
+    URL: https://projects.coin-or.org/svn/Osi/stable/0.108/Osi
+    Version: master
+    Required: Required
+  - Description: Open Solver Interface
+    URL: https://projects.coin-or.org/svn/Clp/stable/1.17/Clp
+    Version: master
+    Required: Required
+  - Description: Open Solver Interface
+    URL: https://projects.coin-or.org/svn/Cgl/stable/0.60/Cgl
+    Version: master
+    Required: Required
+  - Description: Open Solver Interface
+    URL: https://github.com/coin-or/CHiPPS-ALPS
+    Version: master
+    Required: Required
+  - Description: Open Solver Interface
+    URL: https://github.com/coin-or/CHiPPS-BiCePS
+    Version: master
+    Required: Required
+  - Description: Basic Linear Algebra Subroutines (BLAS)
+    URL: http://www.netlib.org/blas
+    Required: Recommended
+  - Description: Linear Algebra Package (LAPACK)
+    URL: http://www.netlib.org/lapack
+    Required: Recommended
+  - Description: GNU Readline
+    Required: Recommended
+  - Description: GNU History
+    Required: Recommended
+
+DevelopmentStatus: 
+  activityStatus: Active
+  maturityLevel: 5
+  testedPlatforms: 
+  - operatingSystem: Linux
+    compiler: gcc
+  - operatingSystem: Mac OS X
+    compiler:
+    - gcc
+    - clang
+  - operatingSystem: Microsoft Windows
+    compiler: cl
+  - operatingSystem: Microsoft Windows with MSys2
+    compiler:
+    - gcc
+    - cl
+    - icl
+  - operatingSystem: Microsoft Windows Subsystem for Linux
+    compiler:
+    - gcc
+    - cl
+    - icl

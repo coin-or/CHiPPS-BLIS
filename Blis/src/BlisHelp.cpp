@@ -81,7 +81,8 @@ BlisStrongBranch(BlisModel *model, double objValue, int colInd, double x,
     int numCols = solver->getNumCols();
     const double * lower = solver->getColLower();
     const double * upper = solver->getColUpper();
-
+    bool checkFeasibleInBranch =
+       model->BlisPar()->entry(BlisParams::checkFeasibleInBranch);
     // Restore bounds
     int numDiff = 0;
 
@@ -124,19 +125,21 @@ BlisStrongBranch(BlisModel *model, double objValue, int colInd, double x,
         model->setSharedObjectMark(ind);        
 
         // Check if ip feasible
-        ksol = model->feasibleSolution(numIntInfDown, numObjInfDown);
-        if (ksol) {
+        if (checkFeasibleInBranch){
+              ksol = model->feasibleSolution(numIntInfDown, numObjInfDown);
+              if (ksol) {
 #ifdef BLIS_DEBUG_MORE
-            printf("STRONG:Down:found a feasible solution\n");
+                 printf("STRONG:Down:found a feasible solution\n");
 #endif
-            
-            model->storeSolution(BlisSolutionTypeStrong, ksol);
-	    downKeep = false;
+                 
+                 model->storeSolution(BlisSolutionTypeStrong, ksol);
+                 downKeep = false;
+              }
+              else {
+                 downKeep = true;
+              }
+              downFinished = true;
         }
-	else {
-	    downKeep = true;
-	}
-	downFinished = true;
     }
     else if (solver->isIterationLimitReached() && 
 	     !solver->isDualObjectiveLimitReached()) {
@@ -194,19 +197,21 @@ BlisStrongBranch(BlisModel *model, double objValue, int colInd, double x,
         model->setSharedObjectMark(ind);        
 
         // Check if IP feasible
-        ksol = model->feasibleSolution(numIntInfDown, numObjInfDown);
-        if (ksol) {
+        if (checkFeasibleInBranch){
+           ksol = model->feasibleSolution(numIntInfDown, numObjInfDown);
+           if (ksol) {
 #ifdef BLIS_DEBUG_MORE
-            printf("STRONG:Up:found a feasible solution\n");
+              printf("STRONG:Up:found a feasible solution\n");
 #endif
-            
-            model->storeSolution(BlisSolutionTypeStrong, ksol);
-            upKeep = false;
+              
+              model->storeSolution(BlisSolutionTypeStrong, ksol);
+              upKeep = false;
+           }
+           else {
+              upKeep = true;
+           }
+           upFinished = true;
         }
-	else {
-	    upKeep = true;
-	}
-	upFinished = true;
     }
     else if (solver->isIterationLimitReached()
 	     &&!solver->isDualObjectiveLimitReached()) {
