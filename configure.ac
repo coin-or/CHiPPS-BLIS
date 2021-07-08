@@ -140,8 +140,7 @@ AC_CONFIG_FILES([Makefile
                  src/Makefile
 		 src/blis.par
                  test/Makefile
-		 blis.pc
-		 blis-uninstalled.pc])
+		 blis.pc])
 
 AC_CONFIG_FILES([doxydoc/doxygen.conf])
 

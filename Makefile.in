@@ -121,7 +121,7 @@ am__CONFIG_DISTCLEAN_FILES = config.status config.cache config.log \
 mkinstalldirs = $(install_sh) -d
 CONFIG_HEADER = $(top_builddir)/src/config.h \
 	$(top_builddir)/src/config_blis.h
-CONFIG_CLEAN_FILES = examples/VRP/Makefile blis.pc blis-uninstalled.pc \
+CONFIG_CLEAN_FILES = examples/VRP/Makefile blis.pc \
 	doxydoc/doxygen.conf
 CONFIG_CLEAN_VPATH_FILES =
 AM_V_P = $(am__v_P_@AM_V@)
@@ -446,8 +446,6 @@ $(am__aclocal_m4_deps):
 examples/VRP/Makefile: $(top_builddir)/config.status $(top_srcdir)/examples/VRP/Makefile.in
 	cd $(top_builddir) && $(SHELL) ./config.status $@
 blis.pc: $(top_builddir)/config.status $(srcdir)/blis.pc.in
-	cd $(top_builddir) && $(SHELL) ./config.status $@
-blis-uninstalled.pc: $(top_builddir)/config.status $(srcdir)/blis-uninstalled.pc.in
 	cd $(top_builddir) && $(SHELL) ./config.status $@
 doxydoc/doxygen.conf: $(top_builddir)/config.status $(top_srcdir)/doxydoc/doxygen.conf.in
 	cd $(top_builddir) && $(SHELL) ./config.status $@

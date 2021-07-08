@@ -19885,7 +19885,7 @@ fi
 
 # Here list all the files that configure should create (except for the
 # configuration header file)
-ac_config_files="$ac_config_files Makefile examples/VRP/Makefile src/Makefile src/blis.par test/Makefile blis.pc blis-uninstalled.pc"
+ac_config_files="$ac_config_files Makefile examples/VRP/Makefile src/Makefile src/blis.par test/Makefile blis.pc"
 
 
 ac_config_files="$ac_config_files doxydoc/doxygen.conf"
@@ -21128,7 +21128,6 @@ do
     "src/blis.par") CONFIG_FILES="$CONFIG_FILES src/blis.par" ;;
     "test/Makefile") CONFIG_FILES="$CONFIG_FILES test/Makefile" ;;
     "blis.pc") CONFIG_FILES="$CONFIG_FILES blis.pc" ;;
-    "blis-uninstalled.pc") CONFIG_FILES="$CONFIG_FILES blis-uninstalled.pc" ;;
     "doxydoc/doxygen.conf") CONFIG_FILES="$CONFIG_FILES doxydoc/doxygen.conf" ;;
     "src/config.h") CONFIG_HEADERS="$CONFIG_HEADERS src/config.h" ;;
     "src/config_blis.h") CONFIG_HEADERS="$CONFIG_HEADERS src/config_blis.h" ;;
