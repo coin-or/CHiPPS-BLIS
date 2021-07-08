@@ -92,23 +92,14 @@ CXXFLAGS = @CXXFLAGS@
 # additional C++ Compiler options for linking
 CXXLINKFLAGS = @RPATH_FLAGS@
 
-ifeq ($(COIN_HAS_PKGCONFIG), TRUE)
-  INCL = `PKG_CONFIG_PATH=@COIN_PKG_CONFIG_PATH@ @PKG_CONFIG@ --cflags blis`
-else
-  INCL = @BLISLIB_CFLAGS_INSTALLED@
-endif
+@COIN_HAS_PKGCONFIG_TRUE@INCL = `PKG_CONFIG_PATH=@COIN_PKG_CONFIG_PATH@ @PKG_CONFIG@ --cflags blis`
+@COIN_HAS_PKGCONFIG_FALSE@INCL = -I@includedir@/coin-or
+
 INCL += $(ADDINCFLAGS)
 
 # Linker flags
-ifeq ($(COIN_HAS_PKGCONFIG), TRUE)
-  LIBS = `PKG_CONFIG_PATH=@COIN_PKG_CONFIG_PATH@ @PKG_CONFIG@ --libs blis`
-else
-  ifeq ($(COIN_CXX_IS_CL), TRUE)
-    LIBS = -link -libpath:`$(CYGPATH_W) @abs_lib_dir@` libBlis.lib @BLISLIB_LIBS_INSTALLED@
-  else
-    LIBS = -L@abs_lib_dir@ -lBlis @BLISLIB_LIBS_INSTALLED@
-  endif
-endif
+@COIN_HAS_PKGCONFIG_TRUE@LIBS = `PKG_CONFIG_PATH=@COIN_PKG_CONFIG_PATH@ @PKG_CONFIG@ --libs blis`
+@COIN_HAS_PKGCONFIG_FALSE@INCL = -L@libdir@ -lBlis -lBcps -lAlps -lCgl -lOsiClp -lClp -lOsi
 
 # The following is necessary under cygwin, if native compilers are used
 CYGPATH_W = @CYGPATH_W@

@@ -1,12 +1,15 @@
-prefix=@prefix@
+@COIN_RELOCATABLE_FALSE@prefix=@prefix@
+@COIN_RELOCATABLE_TRUE@prefix=${pcfiledir}/../..
 exec_prefix=@exec_prefix@
 libdir=@libdir@
-includedir=@includedir@/coin
+includedir=@includedir@/coin-or
 
-Name: BLIS
+Name: @PACKAGE_NAME@
 Description: BiCePS Linear Integer Solver
-URL: https://projects.coin-or.org/CHiPPS
+URL: @PACKAGE_URL@
 Version: @PACKAGE_VERSION@
-Libs: -L${libdir} -lBlis @BLISLIB_PCLIBS@
 Cflags: -I${includedir}
-Requires: @BLISLIB_PCREQUIRES@
+@COIN_STATIC_BUILD_FALSE@Libs: -L${libdir} -lBlis
+@COIN_STATIC_BUILD_FALSE@Requires.private: @BLISLIB_PCFILES@
+@COIN_STATIC_BUILD_TRUE@Libs: -L${libdir} -lBls @BLISLIB_LFLAGS_NOPC@
+@COIN_STATIC_BUILD_TRUE@Requires: @BLISLIB_PCFILES@

@@ -23,8 +23,6 @@
 
 ## $Id: $
 
-AUTOMAKE_OPTIONS = foreign
-
 ########################################################################
 #                      unitTest for CoinUtils                          #
 ########################################################################
@@ -35,15 +33,11 @@ nodist_unitTest_SOURCES = \
 	BlisMain.cpp 
 
 # List libraries of COIN projects
-unitTest_LDADD = ../src/libBlis.la $(BLISLIB_LIBS)
-unitTest_DEPENDENCIES = ../src/libBlis.la $(BLISLIB_DEPENDENCIES)
+unitTest_LDADD = ../src/libBlis.la $(BLISLIB_LFLAGS)
 
-# Here list all include flags, relative to this "srcdir" directory.  This
-# "cygpath" stuff is necessary to compile with native compilers on Cygwin
-AM_CPPFLAGS = -I`$(CYGPATH_W) $(srcdir)/../src` $(BLISLIB_CFLAGS)
+AM_LDFLAGS = $(LT_LDFLAGS)
 
-# This line is necessary to allow VPATH compilation
-DEFAULT_INCLUDES = -I. -I`$(CYGPATH_W) $(srcdir)` -I$(top_builddir)/src
+AM_CPPFLAGS = -I$(srcdir)/../src $(BLISLIB_CFLAGS) 	
 
 if COIN_HAS_SAMPLE
 test: unitTest$(EXEEXT)

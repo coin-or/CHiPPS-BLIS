@@ -23,8 +23,6 @@
 
 ## $Id$
 
-AUTOMAKE_OPTIONS = foreign
-
 ########################################################################
 #                               libBlis                                #
 ########################################################################
@@ -79,13 +77,9 @@ libBlis_la_SOURCES = \
 	BlisTreeNode.h \
 	BlisVariable.h
 
-# List all additionally required libraries
-if DEPENDENCY_LINKING
-libBlis_la_LIBADD = $(BLISLIB_LIBS)
-endif
+libBlis_la_LIBADD = $(BLISLIB_LFLAGS)
 
-# This is for libtool (on Windows)
-libBlis_la_LDFLAGS = $(LT_LDFLAGS)
+libBlis_la_CPPFLAGS = $(BLISLIB_CFLAGS)
 
 ########################################################################
 #                        blis binary                                   #
@@ -93,19 +87,15 @@ libBlis_la_LDFLAGS = $(LT_LDFLAGS)
 
 bin_PROGRAMS = blis
 blis_SOURCES = BlisMain.cpp 
-blis_LDADD = libBlis.la $(BLISLIB_LIBS)
-blis_DEPENDENCIES = libBlis.la $(BLISLIB_DEPENDENCIES)
+blis_LDADD = libBlis.la 
+blis_CPPFLAGS = $(BLISLIB_CFLAGS)
 
 ########################################################################
 #                            Additional flags                          #
 ########################################################################
 
-# Here list all include flags, relative to this "srcdir" directory.  This
-# "cygpath" stuff is necessary to compile with native compilers on Windows.
-AM_CPPFLAGS = $(BLISLIB_CFLAGS)
-
-# This line is necessary to allow VPATH compilation
-DEFAULT_INCLUDES = -I. -I`$(CYGPATH_W) $(srcdir)`
+# Use additional libtool flags
+AM_LDFLAGS = $(LT_LDFLAGS)
 
 ########################################################################
 #                Headers that need to be installed                     #
@@ -113,7 +103,7 @@ DEFAULT_INCLUDES = -I. -I`$(CYGPATH_W) $(srcdir)`
 
 # Here list all the header files that are required by a user of the library,
 # and that therefore should be installed in 'install/coin'
-includecoindir = $(includedir)/coin
+includecoindir = $(includedir)/coin-or
 includecoin_HEADERS = \
 	BlisBranchObjectInt.h \
 	BlisBranchStrategyMaxInf.h \
@@ -138,17 +128,6 @@ includecoin_HEADERS = \
 	BlisSubTree.h \
 	BlisTreeNode.h \
 	BlisVariable.h
-
-########################################################################
-#                     Installing manifest (MSVC++)                     #
-########################################################################
-
-if COIN_CXX_IS_CL
-install-exec-hook:
-	test -s blis.exe.manifest && \
-	mt -manifest blis.exe.manifest -outputresource:blis.exe;\
-	cp blis.exe $(bindir)/blis.exe
-endif
 
 #############################################################################
 # Create the Config.h file that always defines HAVE_CONFIG_H and install it #
