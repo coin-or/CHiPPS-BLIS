@@ -29,13 +29,12 @@
 
 #include "BcpsBranchObject.h"
 
+#include "BlisConfig.h"
 #include "BlisModel.h"
-
 
 //#############################################################################
 
-
-class BlisBranchObjectBilevel : public BcpsBranchObject {
+class BLISLIB_EXPORT BlisBranchObjectBilevel : public BcpsBranchObject {
 
  protected:
 

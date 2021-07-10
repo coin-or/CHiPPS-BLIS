@@ -27,12 +27,13 @@
 #include "AlpsKnowledge.h"
 #include "AlpsParameterBase.h"
 
+#include "BlisConfig.h"
 #include "Blis.h"
 
 //#############################################################################
 
 //** Parameters used in Blis. */
-class BlisParams : public AlpsParameterSet {
+class BLISLIB_EXPORT BlisParams : public AlpsParameterSet {
  public:
   /** Character parameters. All of these variable are used as booleans
       (ture = 1, false = 0). */

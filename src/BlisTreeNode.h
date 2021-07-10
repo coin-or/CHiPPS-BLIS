@@ -32,6 +32,7 @@
 #include "BcpsTreeNode.h"
 
 #include "BcpsNodeDesc.h"
+#include "BlisConfig.h"
 #include "BlisNodeDesc.h"
 
 class BcpsModel;
@@ -45,7 +46,7 @@ class BlisModel;
 //#############################################################################
 
 
-class BlisTreeNode : public BcpsTreeNode {
+class BLISLIB_EXPORT BlisTreeNode : public BcpsTreeNode {
 private:
     
     /** No copy constructor, assignment operator. */

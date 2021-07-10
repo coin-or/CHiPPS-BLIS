@@ -31,13 +31,14 @@
 #include "AlpsNodeDesc.h"
 #include "BcpsNodeDesc.h"
 
+#include "BlisConfig.h"
 #include "BlisHelp.h"
 #include "BlisModel.h"
 
 //#############################################################################
 
 
-class BlisNodeDesc : public BcpsNodeDesc {
+class BLISLIB_EXPORT BlisNodeDesc : public BcpsNodeDesc {
 
  private:
     

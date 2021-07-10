@@ -34,6 +34,7 @@
 #include "CoinPackedMatrix.hpp"
 #include "OsiCuts.hpp"
 
+#include "BlisConfig.h"
 #include "BlisHeuristic.h"
 
 class BlisModel;
@@ -41,7 +42,7 @@ class BlisModel;
 //#############################################################################
 
 /** Rounding Heuristic.  */
-class BlisHeurRound : public BlisHeuristic {
+class BLISLIB_EXPORT BlisHeurRound : public BlisHeuristic {
  private:
     /** Illegal Assignment operator. */ 
     BlisHeurRound & operator=(const BlisHeurRound& rhs);

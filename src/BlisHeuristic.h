@@ -36,6 +36,7 @@
 #include "CoinPackedMatrix.hpp"
 #include "OsiCuts.hpp"
 
+#include "BlisConfig.h"
 #include "Blis.h"
 
 class BlisModel;
@@ -45,7 +46,7 @@ class BlisModel;
 
 
 /** Heuristic base class */
-class BlisHeuristic {
+class BLISLIB_EXPORT BlisHeuristic {
 
  private:
 

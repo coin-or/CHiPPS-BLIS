@@ -28,12 +28,13 @@
 
 #include "BcpsObject.h"
 #include "BlisPseudo.h"
+#include "BlisConfig.h"
 
 class BlisModel;
 
 //#############################################################################
 
-class BlisObjectInt : public BcpsObject {
+class BLISLIB_EXPORT BlisObjectInt : public BcpsObject {
 
 protected:
 

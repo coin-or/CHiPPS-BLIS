@@ -34,6 +34,8 @@
 /** This deals with Blis messages. */
 #include "CoinMessageHandler.hpp"
 
+#include "BlisConfig.h"
+
 //#############################################################################
 
 enum BLIS_Message
@@ -56,7 +58,7 @@ enum BLIS_Message
 
 //#############################################################################
 
-class BlisMessage : public CoinMessages 
+class BLISLIB_EXPORT BlisMessage : public CoinMessages 
 {
 public:
     

@@ -25,10 +25,11 @@
 #define BlisVariable_h_
 
 #include "BcpsObject.h"
+#include "BlisConfig.h"
 
 //#############################################################################
 
-class BlisVariable : public BcpsVariable {
+class BLISLIB_EXPORT BlisVariable : public BcpsVariable {
 
  private:
 

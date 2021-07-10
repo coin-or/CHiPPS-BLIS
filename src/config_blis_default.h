@@ -27,7 +27,7 @@
 /***************************************************************************/
 
 /* Version number of project */
-#define BLIS_VERSION "trunk"
+#define BLIS_VERSION "devel"
 
 /* Major Version number of project */
 #define BLIS_VERSION_MAJOR   9999

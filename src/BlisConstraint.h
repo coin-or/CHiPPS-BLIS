@@ -25,12 +25,13 @@
 #define BlisConstraint_h_
 
 #include "BcpsObject.h"
+#include "BlisConfig.h"
 
 class OsiRowCut;
 
 //#############################################################################
 
-class BlisConstraint : public BcpsConstraint {
+class BLISLIB_EXPORT BlisConstraint : public BcpsConstraint {
     
  protected:
     /** Number of nonzero coefficients */

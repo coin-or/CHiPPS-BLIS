@@ -26,10 +26,11 @@
 
 #include "CoinError.hpp"
 #include "AlpsKnowledge.h"
+#include "BlisConfig.h"
 
 //#############################################################################
 
-class BlisPseudocost : public AlpsKnowledge
+class BLISLIB_EXPORT BlisPseudocost : public AlpsKnowledge
 {
 private:
     /** Use to calculate score. */

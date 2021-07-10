@@ -21,7 +21,7 @@
  * All Rights Reserved.                                                      *
  *===========================================================================*/
 
-/* Include file for the configuration of Alps.
+/* Include file for the configuration of Blis.
  *
  * On systems where the code is configured with the configure script
  * (i.e., compilation is always done with HAVE_CONFIG_H defined), this
@@ -43,15 +43,29 @@
 #define __BLISCONFIG_H__
 
 #ifdef HAVE_CONFIG_H
-#ifdef BLIS_BUILD
+#ifdef BLISLIB_BUILD
 #include "config.h"
+
+/* overwrite BLISLIB_EXPORT from config.h when building Alps
+ * we want it to be __declspec(dllexport) when building a DLL on Windows
+ * we want it to be __attribute__((__visibility__("default"))) when building with GCC,
+ *   so user can compile with -fvisibility=hidden
+ */
+#ifdef DLL_EXPORT
+#undef BLISLIB_EXPORT
+#define BLISLIB_EXPORT __declspec(dllexport)
+#elif defined(__GNUC__) && __GNUC__ >= 4
+#undef BLISLIB_EXPORT
+#define BLISLIB_EXPORT __attribute__((__visibility__("default")))
+#endif
+
 #else
-#include "config_blis.h"
+#include "config_alps.h"
 #endif
 
 #else /* HAVE_CONFIG_H */
 
-#ifdef BLIS_BUILD
+#ifdef BLISLIB_BUILD
 #include "config_default.h"
 #else
 #include "config_blis_default.h"

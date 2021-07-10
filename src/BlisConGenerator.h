@@ -33,6 +33,7 @@
 #include "OsiSolverInterface.hpp"
 #include "OsiCuts.hpp"
 
+#include "BlisConfig.h"
 
 class BlisModel;
 
@@ -55,7 +56,7 @@ class CglCutGenerator;
     solution is found, and when a subproblem is found to be infeasible. 
 */
 
-class BlisConGenerator  {
+class BLISLIB_EXPORT BlisConGenerator  {
 
 protected:
     /** The client model. */

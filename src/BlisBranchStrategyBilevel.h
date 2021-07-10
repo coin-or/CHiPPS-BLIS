@@ -26,10 +26,11 @@
 
 #include "BcpsBranchObject.h"
 #include "BcpsBranchStrategy.h"
+#include "BlisConfig.h"
 #include "BlisModel.h"
 
 /** This class implements maximum infeasibility branching. */
-class BlisBranchStrategyBilevel : public BcpsBranchStrategy {
+class BLISLIB_EXPORT BlisBranchStrategyBilevel : public BcpsBranchStrategy {
 
  private:
 

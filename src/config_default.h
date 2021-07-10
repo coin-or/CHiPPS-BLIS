@@ -44,9 +44,6 @@
 /* Define to 1 if the BiCePS package is used */
 #define BLIS_HAS_BCPS 1
 
-/* Define to 1 if the Blis package is used */
-#define BLIS_HAS_BLIS 1
-
 /* Define to 1 if the CoinUtils package is used */
 #define BLIS_HAS_COINUTILS 1
 

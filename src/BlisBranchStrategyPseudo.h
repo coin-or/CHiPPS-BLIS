@@ -32,12 +32,13 @@
 
 #include "BcpsBranchObject.h"
 #include "BcpsBranchStrategy.h"
+#include "BlisConfig.h"
 #include "BlisModel.h"
 
 
 /** Blis branching strategy.
     This class implements pseudocost branching. */
-class BlisBranchStrategyPseudo : public BcpsBranchStrategy {
+class BLISLIB_EXPORT BlisBranchStrategyPseudo : public BcpsBranchStrategy {
 
  private:
     /** Illegal Assignment operator.*/

@@ -30,11 +30,12 @@
 #endif
 
 #include "OsiPresolve.hpp"
+#include "BlisConfig.h"
 
 //#############################################################################
 
 /** A interface to Osi/Coin Presolve. */
-class BlisPresolve : public OsiPresolve
+class BLISLIB_EXPORT BlisPresolve : public OsiPresolve
 {
 private:
     

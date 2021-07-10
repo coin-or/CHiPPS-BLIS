@@ -32,12 +32,13 @@
 
 #include "BcpsBranchObject.h"
 #include "BcpsBranchStrategy.h"
+#include "BlisConfig.h"
 #include "BlisModel.h"
 
 
 /** Blis branching strategy.
     This class implements reliability branching. */
-class BlisBranchStrategyRel : public BcpsBranchStrategy {
+class BLISLIB_EXPORT BlisBranchStrategyRel : public BcpsBranchStrategy {
 
  private:
     /** Illegal Assignment operator.*/

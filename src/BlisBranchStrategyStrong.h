@@ -32,6 +32,7 @@
 
 #include "BcpsBranchObject.h"
 #include "BcpsBranchStrategy.h"
+#include "BlisConfig.h"
 #include "BlisModel.h"
 
 
@@ -54,7 +55,7 @@ typedef struct {
 
 
 /** This class implements strong branching. */
-class BlisBranchStrategyStrong : public BcpsBranchStrategy {
+class BLISLIB_EXPORT BlisBranchStrategyStrong : public BcpsBranchStrategy {
 
  private:
 

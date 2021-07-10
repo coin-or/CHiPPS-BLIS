@@ -48,6 +48,7 @@
 #include "BcpsObjectPool.h"
 #include "BcpsModel.h"
 
+#include "BlisConfig.h"
 #include "Blis.h"
 #include "BlisConGenerator.h"
 #include "BlisHeuristic.h"
@@ -66,7 +67,7 @@ class BlisVariable;
 //#############################################################################
 
 /* Declare a BLIS model */
-class BlisModel : public BcpsModel {
+class BLISLIB_EXPORT BlisModel : public BcpsModel {
 
 protected:
     

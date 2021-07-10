@@ -24,13 +24,15 @@
 #ifndef BlisSubTree_h_
 #define BlisSubTree_h_
 
+#include "BlisConfig.h"
+
 //#############################################################################
 /** This is the class in which we are finally able to concretely define the
     bounding procedure. Here we can assume that we have an LP solver and that
     the objects are cuts and variables, etc. */
 //#############################################################################
 
-class BlisTreeNode : public BcpsTreeNode {
+class BLISLIB_EXPORT BlisTreeNode : public BcpsTreeNode {
 
    virtual void process();
 
