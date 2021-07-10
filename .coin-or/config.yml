@@ -45,11 +45,11 @@ Dependencies:
     Required: Required
   - Description: Open Solver Interface
     URL: https://github.com/coin-or/CHiPPS-ALPS
-    Version: master
+    Version: 1.6
     Required: Required
   - Description: Open Solver Interface
     URL: https://github.com/coin-or/CHiPPS-BiCePS
-    Version: master
+    Version: 0.95
     Required: Required
   - Description: Basic Linear Algebra Subroutines (BLAS)
     URL: http://www.netlib.org/blas
