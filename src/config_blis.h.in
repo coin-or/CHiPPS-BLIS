@@ -24,6 +24,9 @@
 #ifndef __CONFIG_BLIS_H__
 #define __CONFIG_BLIS_H__
 
+/* For DLL import/export */
+#undef BLISLIB_EXPORT
+
 /* Version number of project */
 #undef BLIS_VERSION
 
