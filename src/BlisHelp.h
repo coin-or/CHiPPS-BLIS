@@ -28,6 +28,7 @@
 
 #include "AlpsEncoded.h"
 
+#include "BlisConfig.h"
 #include "Blis.h"
 
 class CoinWarmStartBasis;
@@ -38,39 +39,40 @@ class BlisModel;
 //#############################################################################
 
 /** Convert a OsiRowCut to a Blis Contraint. */
-BlisConstraint * BlisOsiCutToConstraint(const OsiRowCut *rowCut);
+BLISLIB_EXPORT BlisConstraint * BlisOsiCutToConstraint(const OsiRowCut *rowCut);
 
 /** Strong branching on a variable colInd. */
-BlisReturnStatus BlisStrongBranch(BlisModel *model, double objValue, int colInd, double x,
-                                  const double *saveLower, const double *saveUpper,
-		                          bool &downKeep, bool &downFinished, double &downDeg,
-		                          bool &upKeep, bool &upFinished, double &upDeg);
+BLISLIB_EXPORT BlisReturnStatus BlisStrongBranch(BlisModel *model, double objValue, int colInd,
+                                                 double x, const double *saveLower,
+                                                 const double *saveUpper, bool &downKeep,
+                                                 bool &downFinished, double &downDeg,
+                                                 bool &upKeep, bool &upFinished, double &upDeg);
 
 /** Pack coin warm start into an encoded object. */
-int BlisEncodeWarmStart(AlpsEncoded *encoded, const CoinWarmStartBasis *ws);
+BLISLIB_EXPORT int BlisEncodeWarmStart(AlpsEncoded *encoded, const CoinWarmStartBasis *ws);
 
 /** Unpack coin warm start from an encoded object. */
-CoinWarmStartBasis *BlisDecodeWarmStart(AlpsEncoded &encoded,
-					AlpsReturnStatus *rc);
+BLISLIB_EXPORT CoinWarmStartBasis *BlisDecodeWarmStart(AlpsEncoded &encoded,
+                                                       AlpsReturnStatus *rc);
 
 /** Compute and return a hash value of an Osi row cut. */
-double BlisHashingOsiRowCut(const OsiRowCut *rowCut, 
-			    const BlisModel *model);
+BLISLIB_EXPORT double BlisHashingOsiRowCut(const OsiRowCut *rowCut, 
+                                           const BlisModel *model);
 
 /** Check if a row cut parallel with another row cut. */
-bool BlisParallelCutCut(OsiRowCut * rowCut1,
-			OsiRowCut * rowCut2,
-			double threshold = 1.0);
+BLISLIB_EXPORT bool BlisParallelCutCut(OsiRowCut * rowCut1,
+                                       OsiRowCut * rowCut2,
+                                       double threshold = 1.0);
 
 /** Check if a row cut parallel with a constraint. */
-bool BlisParallelCutCon(OsiRowCut * rowCut,
-			BlisConstraint * con,
-			double threshold = 1.0);
+BLISLIB_EXPORT bool BlisParallelCutCon(OsiRowCut * rowCut,
+                                       BlisConstraint * con,
+                                       double threshold = 1.0);
 
 /** Check if a row cut parallel with a constraint. */
-bool BlisParallelConCon(BlisConstraint * con1,
-			BlisConstraint * con2,
-			double threshold = 1.0);
+BLISLIB_EXPORT bool BlisParallelConCon(BlisConstraint * con1,
+                                       BlisConstraint * con2,
+                                       double threshold = 1.0);
 
 
 #endif
