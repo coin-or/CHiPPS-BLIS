@@ -55,9 +55,6 @@ protected:
     
  public:
 
-    /** Default Constructor. */
-    BlisObjectInt();
-    
     /** Useful constructor - passed integer index and model index. */
     BlisObjectInt(int objectIndex, 
                   int iColumn, 
