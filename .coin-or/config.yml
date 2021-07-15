@@ -21,7 +21,8 @@ Description:
   Categories: 
     - Optimization deterministic linear discrete
     - Optimization utility
-
+  PaperCite: http://dx.doi.org/10.1287/ijoc.1090.0347
+  
 Dependencies:
   - Description: Sample data files
     URL: https://projects.coin-or.org/svn/Data/Sample/stable/1.2
