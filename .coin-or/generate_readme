@@ -1,0 +1,73 @@
+#!/usr/bin/env bash
+
+# Exit when command fails
+set -e
+#Attempt to use undefined variable outputs error message, and forces an exit
+set -u
+#Causes a pipeline to return the exit status of the last command in the pipe
+#that returned a non-zero return value.
+set -o pipefail
+#set -x
+
+source $COINBREW_HOME/scripts/generate_readme
+
+pushd . > /dev/null
+cd $(dirname $0)
+SCRIPT_DIR=$PWD
+popd > /dev/null
+
+create_variables $SCRIPT_DIR/config.yml
+
+make_header
+
+echo "BLIS (BiCePS Linear Integer Solver) is an application developed on top of
+BiCePS and is part of the CHiPPS library hierarchy. BLIS is a branch and cut
+solver for Mixed Integer Linear Programs."
+
+make_build_info_no_packages
+
+echo "## BUILDING with MPI (PARALLEL VERSION)
+
+For configuration and compilation of the parallel version, the user has
+to specify the location of MPI with options \`--with-mpi-cflags\`,
+\`--with-mpi-lflags\`, \`MPICC\`, and \`MPICXX\`. 
+
+\`\`\`
+./coinbrew build Blis --enable-static --disable-shared \
+--with-mpi-cflags=\"\$\(pkg-config --cflags mpi\)\" \
+--with-mpi-lflags=\"\$\(pkg-config --libs mpi\)\" MPICC=mpicc MPICXX=mpiCC
+\`\`\`
+
+## BUILDING EXAMPLES
+
+To build the example codes, configure and build as above. Switch into the
+appropriate subdirectory in the source distribution and type \`make\`."
+
+make_doxygen_info
+
+make_links
+
+echo "## CURRENT TESTING STATUS
+
+  1. Configurations
+    - Serial: Well tested.
+    - LAMMPI: Well tested.
+    - MPICH: Well tested.
+
+  2. Applications (See INSTALL)
+    - Blis: an older version of the Blis solver: Well tested.
+
+## Authors
+
+Source Code:
+
+Yan Xu (yax2@lehigh.edu)
+Aykut Bulut (aykutblt@gmail.com) 
+Ted Ralphs (ted@lehigh.edu), Project Manager
+
+Original Conceptual Design:
+
+Yan Xu (yax2@lehigh.edu)
+Ted Ralphs (ted@lehigh.edu), Project Manager
+Laci Ladanyi (ladanyi@us.ibm.com)
+Matt Saltzman (mjs@clemson.edu)"
