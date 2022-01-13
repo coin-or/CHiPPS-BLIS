@@ -27,7 +27,7 @@
 #                       Names and other basic things                        #
 #############################################################################
 
-AC_INIT([Blis],[devel],[https://github.com/coin-or/CHiPPS-BLIS/issues/new],[coin-or-blis],[https://github.com/coin-or/CHiPPS-BLIS])
+AC_INIT([Blis],[0.95],[https://github.com/coin-or/CHiPPS-BLIS/issues/new],[coin-or-blis],[https://github.com/coin-or/CHiPPS-BLIS])
 
 AC_COPYRIGHT([
 #==========================================================================#
@@ -145,7 +145,7 @@ AC_CONFIG_FILES([Makefile
 AC_CONFIG_FILES([doxydoc/doxygen.conf])
 
 # Here put the location and name of the configuration header file
-AC_CONFIG_HEADER([src/config.h src/config_blis.h])
+AC_CONFIG_HEADERS([src/config.h src/config_blis.h])
 
 # Finalize libs and cflags.
 AC_COIN_FINALIZE_FLAGS([BlisLib])
