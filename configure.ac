@@ -29,7 +29,7 @@
 
 AC_PREREQ(2.59)
 
-AC_INIT([Blis],[0.94],[https://github.com/coin-or/CHiPPS-BLIS/issues/new])
+AC_INIT([Blis],[0.94.9],[https://github.com/coin-or/CHiPPS-BLIS/issues/new])
 
 AC_COPYRIGHT([
 #==========================================================================#
