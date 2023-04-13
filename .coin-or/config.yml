@@ -26,25 +26,25 @@ Description:
 Dependencies:
   - Description: Sample data files
     URL: https://projects.coin-or.org/svn/Data/Sample/stable/1.2
-    Version: master
+    Version: 1.2
     Required: Required
   - Description: COIN-OR Utilities
-    URL: https://projects.coin-or.org/svn/CoinUtils/stable/2.11/CoinUtils
+    URL: https://projects.coin-or.org/svn/CoinUtils/trunk/CoinUtils
     Version: 2.11
     Required: Required
   - Description: Open Solver Interface
-    URL: https://projects.coin-or.org/svn/Osi/stable/0.108/Osi
+    URL: https://projects.coin-or.org/svn/Osi/stable/0.107/Osi
     Version: 0.108
     Required: Required
   - Description: COIN-OR LP Solver
-    URL: https://projects.coin-or.org/svn/Clp/stable/1.17/Clp
+    URL: https://projects.coin-or.org/svn/Clp/stable/1.16/Clp
     Version: 1.17
     Required: Required
-  - Description: Cut Generator Library
-    URL: https://projects.coin-or.org/svn/Cgl/stable/0.60/Cgl
+  - Description: Cut Generation Library
+    URL: https://projects.coin-or.org/svn/Cgl/stable/0.59/Cgl
     Version: 0.60
     Required: Required
-  - Description: The Abstract Library for Parallel Search
+  - Description: Abstract Library for Parallel Search
     URL: https://github.com/coin-or/CHiPPS-ALPS
     Version: 1.5
     Required: Required
