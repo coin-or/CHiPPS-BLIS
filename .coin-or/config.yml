@@ -26,7 +26,7 @@ Description:
 Dependencies:
   - Description: Sample data files
     URL: https://github.com/coin-or-tools/Data-Sample
-    Version: 1.2
+    Version: master
     Required: Required
   - Description: COIN-OR Utilities
     URL: https://github.com/coin-or/CoinUtils
