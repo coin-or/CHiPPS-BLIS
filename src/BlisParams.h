@@ -204,6 +204,7 @@ class BLISLIB_EXPORT BlisParams : public AlpsParameterSet {
 		     static_cast<int>(endOfStrArrayParams)
 		     )
     {
+      suffix_ = "Blis";
       createKeywordList();
       setDefaultEntries();
     }
