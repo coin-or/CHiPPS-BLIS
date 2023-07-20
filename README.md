@@ -1,6 +1,11 @@
-# Blis 0.95
+# Blis
 
 [![A COIN-OR Project](https://coin-or.github.io/coin-or-badge.png)](https://www.coin-or.org)
+
+Projects such as this one are maintained by a small group of volunteers under
+the auspices of the non-profit [COIN-OR Foundation](https://www.coin-or.org)
+and we need your help! Please consider [sponsoring our
+activities](https://github.com/sponsors/coin-or) or [volunteering](mailto:volunteer@coin-or.org) to help!
 
 [![Latest Release](https://img.shields.io/github/v/release/coin-or/CHiPPS-BLIS?sort=semver)](https://github.com/coin-or/CHiPPS-BLIS/releases)
 
@@ -27,9 +32,9 @@ Paper: http://dx.doi.org/10.1287/ijoc.1090.0347
 
 ## CURRENT BUILD STATUS
 
-[![Windows Builds](https://github.com/coin-or/CHiPPS-BLIS/actions/workflows/windows-ci.yml/badge.svg?branch=stable/0.95)](https://github.com/coin-or/CHiPPS-BLIS/actions/workflows/windows-ci.yml?query=branch%3Astable/0.95)
+[![Windows Builds](https://github.com/coin-or/CHiPPS-BLIS/actions/workflows/windows-ci.yml/badge.svg?branch=master)](https://github.com/coin-or/CHiPPS-BLIS/actions/workflows/windows-ci.yml?query=branch%3Amaster)
 
-[![Linux and MacOS Builds](https://github.com/coin-or/CHiPPS-BLIS/actions/workflows/linux-ci.yml/badge.svg?branch=stable/0.95)](https://github.com/coin-or/CHiPPS-BLIS/actions/workflows/linux-ci.yml?query=branch%3Astable/0.95)
+[![Linux and MacOS Builds](https://github.com/coin-or/CHiPPS-BLIS/actions/workflows/linux-ci.yml/badge.svg?branch=master)](https://github.com/coin-or/CHiPPS-BLIS/actions/workflows/linux-ci.yml?query=branch%3Amaster)
 
 ## DOWNLOAD
 
@@ -87,7 +92,7 @@ following on the command line.
 ```
 wget https://raw.githubusercontent.com/coin-or/coinbrew/master/coinbrew
 chmod u+x coinbrew
-./coinbrew fetch Blis@0.95
+./coinbrew fetch Blis@master
 ./coinbrew build Blis
 ```
 For more detailed instructions on coinbrew, see https://coin-or.github.io/coinbrew.
@@ -127,7 +132,7 @@ If you have `Doxygen` available, you can build a HTML documentation by typing
 `make doxygen-docs` 
 
 in the build directory. If Blis was built via `coinbrew`, then the build
-directory will be `./build/CHiPPS-BLIS/0.95` by default. The doxygen documentation main file
+directory will be `./build/CHiPPS-BLIS/master` by default. The doxygen documentation main file
 is found at `<build-dir>/doxydoc/html/index.html`.
 
 If you don't have `doxygen` installed locally, you can use also find the
@@ -138,9 +143,10 @@ documentation [here](http://coin-or.github.io/CHiPPS-BLIS/Doxygen).
 
  * [Code of Conduct](https://www.coin-or.org/code-of-conduct/)
  * [COIN-OR Web Site](http://www.coin-or.org/)
- * [Discussion formum](https://github.com/coin-or/CHiPPS-BLIS/discussions)
+ * [COIN-OR general discussion forum](https://github.com/orgs/coin-or/discussions)
+ * [Blis Discussion forum](https://github.com/coin-or/CHiPPS-BLIS/discussions)
  * [Report a bug](https://github.com/coin-or/CHiPPS-BLIS/issues/new)
- * [Doxygen-generated html documentation](http://coin-or.github.io/CHiPPS-BLIS/Doxygen)
+ * [Doxygen generated documentation](http://coin-or.github.io/CHiPPS-BLIS/Doxygen)
 
 ## CURRENT TESTING STATUS
 
