@@ -106,7 +106,7 @@ class BlisParams : public AlpsParameterSet {
       /** Heuristics control.
           BlisHeurStrategyRoot:     root,
           BlisHeurStrategyAuto:     auto,
-          BlisHuerStrategyNone:     disable, 
+          BlisHeurStrategyNone:     disable, 
           BlisHeurStrategyPeriodic: every 't' nodes
       */
       heurStrategy, /** All heuristics */
@@ -199,7 +199,7 @@ class BlisParams : public AlpsParameterSet {
 		     static_cast<int>(endOfStrArrayParams)
 		     )
     {
-      suffix_ = "Blis"; 
+      prefix_ = "Blis"; 
       createKeywordList();
       setDefaultEntries();
     }
