@@ -52,6 +52,21 @@
 
 int main(int argc, char *argv[]) 
 {
+   std::cout 
+      << "\n========================================================"
+      << "\n========================================================"
+      << "\nWelcome to the Blis Mixed Integer Linear Solver"
+      << "\nCopyright (C) 2007-2023 Lehigh University, Yan Xu, and Ted Ralphs"
+      << "\nAll Rights Reserved."
+      << "\nThis software is licensed under the Eclipse Public License. Please see"
+      << "\naccompanying file for terms."
+      << "\nVersion: " << BLIS_VERSION
+      << "\nBuild Date: " << __DATE__
+      << "\nAlps Version: " << ALPS_VERSION
+      << "\nBcps Version: " << BCPS_VERSION 
+      << "\n========================================================"
+      << "\n========================================================"
+      << "\n\n";
 
 	try{
 		// Set up lp solver
@@ -64,9 +79,9 @@ int main(int argc, char *argv[])
 		model.setSolver(&lpSolver);
 	
 #ifdef  COIN_HAS_MPI
-		AlpsKnowledgeBrokerMPI broker(argc, argv, model);
+		AlpsKnowledgeBrokerMPI broker(argc, argv, model, false);
 #else
-		AlpsKnowledgeBrokerSerial broker(argc, argv, model); 
+		AlpsKnowledgeBrokerSerial broker(argc, argv, model, false); 
 #endif
 
 		// Search for best solution
