@@ -129,7 +129,7 @@ appropriate subdirectory in the source distribution and type `make`.
 
 If you have `Doxygen` available, you can build a HTML documentation by typing
 
-`make doxygen-docs` 
+`make doxydoc` 
 
 in the build directory. If Blis was built via `coinbrew`, then the build
 directory will be `./build/CHiPPS-BLIS/0.94` by default. The doxygen documentation main file
