@@ -27,7 +27,7 @@
 #                       Names and other basic things                        #
 #############################################################################
 
-AC_INIT([Blis],[0.95],[https://github.com/coin-or/CHiPPS-BLIS/issues/new],[coin-or-blis],[https://github.com/coin-or/CHiPPS-BLIS])
+AC_INIT([Blis],[0.95.0],[https://github.com/coin-or/CHiPPS-BLIS/issues/new],[coin-or-blis],[https://github.com/coin-or/CHiPPS-BLIS])
 
 AC_COPYRIGHT([
 #==========================================================================#
@@ -59,7 +59,7 @@ AC_COPYRIGHT([
 AC_CONFIG_SRCDIR(src/BlisModel.h)
 
 # Do some initialization work (version numbers, change prefix default, ...)
-AC_COIN_INITIALIZE
+AC_COIN_INITIALIZE(9:0:8)
 
 #############################################################################
 #                         Standard build tool stuff                         #
