@@ -1,0 +1,6 @@
+<map id="VrpNetwork" name="VrpNetwork">
+<area shape="rect" id="node1" title=" " alt="" coords="49,199,139,225"/>
+<area shape="rect" id="node2" href="$structVERTEX.html" title=" " alt="" coords="5,5,81,32"/>
+<area shape="rect" id="node3" href="$structELIST.html" title=" " alt="" coords="65,109,123,136"/>
+<area shape="rect" id="node4" href="$structEDGE.html" title=" " alt="" coords="205,5,265,32"/>
+</map>

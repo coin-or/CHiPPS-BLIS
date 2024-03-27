@@ -1,0 +1,8 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" title=" " alt="" coords="5,107,148,133"/>
+<area shape="rect" id="node2" href="$classBlisBranchStrategyBilevel.html" title="This class implements maximum infeasibility branching." alt="" coords="199,5,372,32"/>
+<area shape="rect" id="node3" href="$classBlisBranchStrategyMaxInf.html" title="This class implements maximum infeasibility branching." alt="" coords="198,56,373,83"/>
+<area shape="rect" id="node4" href="$classBlisBranchStrategyPseudo.html" title="Blis branching strategy." alt="" coords="196,107,375,133"/>
+<area shape="rect" id="node5" href="$classBlisBranchStrategyRel.html" title="Blis branching strategy." alt="" coords="208,157,363,184"/>
+<area shape="rect" id="node6" href="$classBlisBranchStrategyStrong.html" title="This class implements strong branching." alt="" coords="199,208,371,235"/>
+</map>

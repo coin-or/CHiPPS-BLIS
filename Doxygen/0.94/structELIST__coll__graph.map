@@ -1,0 +1,5 @@
+<map id="ELIST" name="ELIST">
+<area shape="rect" id="node1" title=" " alt="" coords="14,95,73,121"/>
+<area shape="rect" id="node2" href="$structVERTEX.html" title=" " alt="" coords="5,199,81,225"/>
+<area shape="rect" id="node3" href="$structEDGE.html" title=" " alt="" coords="13,5,73,32"/>
+</map>
