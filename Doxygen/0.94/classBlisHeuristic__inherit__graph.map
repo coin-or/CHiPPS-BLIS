@@ -1,5 +1,0 @@
-<map id="BlisHeuristic" name="BlisHeuristic">
-<area shape="rect" id="node1" title="Heuristic base class." alt="" coords="77,5,173,32"/>
-<area shape="rect" id="node2" href="$classBlisHeurRound.html" title="Rounding Heuristic." alt="" coords="5,80,116,107"/>
-<area shape="rect" id="node3" href="$classVrpHeurTSP.html" title=" " alt="" coords="141,80,237,107"/>
-</map>
