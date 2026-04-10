@@ -1720,7 +1720,7 @@ TERM_FEAS_HEUR:
     
     if (rowAct) delete [] rowAct;
 
-    addFeasCheckTime(CoinWallclockTime(start)-start);
+    addFeasCheckTime(CoinWallclockTime()-start);
     return blisSol;
 }
 
