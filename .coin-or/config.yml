@@ -12,7 +12,7 @@ Description:
   Manager: Ted Ralphs, ted at lehigh dot edu 
   Homepage: https://github.com/coin-or/CHiPPS-BLIS
   License: Eclipse Public License 2.0
-  LicenseURL: http://www.opensource.org/licenses/eclipse-2.0
+  LicenseURL: http://www.opensource.org/licenses/EPL-2.0
   Zenodo: 23727016
   IncludedIn:
     Package: CHiPPS-BLIS
